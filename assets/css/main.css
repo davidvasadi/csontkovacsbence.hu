@@ -1585,7 +1585,7 @@ section,
   color: var(--accent-color);
 }
 .service-background-dark{
-  background-image: url(/assets/img/service-dark-background.png);
+  background-image: url(https://davidvasadi.github.io/csontkovacsbence.hu/assets/img/service-dark-background.png);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: bottom;
@@ -1596,7 +1596,7 @@ section,
   /* min-height: */
 } 
 .service-background-light{
-  background-image: url(/assets/img/service-light-background.png);
+  background-image: url(https://davidvasadi.github.io/csontkovacsbence.hu/assets/img/service-light-background.png);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: bottom;
