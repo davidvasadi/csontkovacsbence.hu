@@ -1609,8 +1609,7 @@ section,
 
 @media (max-width: 992px) {
   .row {
-    display: flex;
-    justify-content: center;
+    display: block;
   }
 }
 @media (max-width: 992px) {
