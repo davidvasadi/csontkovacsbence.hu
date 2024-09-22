@@ -1611,7 +1611,6 @@ section,
   .row {
     display: flex;
     justify-content: center;
-    flex-direction: column!important;
   }
 }
 @media (max-width: 992px) {
