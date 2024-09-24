@@ -1605,8 +1605,12 @@ section,
   background-size: cover;
   -o-background-size: cover;
   /* min-height: */
-} 
-
+}
+@media (max-width: 992px) {
+  .row-mobile{
+    display: block;
+  }
+}  
 /*-------------------------------------------------
 #       Trash ideas    
 --------------------------------------------------*/
