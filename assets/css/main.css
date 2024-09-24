@@ -1607,15 +1607,10 @@ section,
   /* min-height: */
 } 
 
+/*        TRASH    
+
 @media (max-width: 992px) {
   .row {
     display: block;
   }
-}
-@media (max-width: 992px) {
-  .row-screen2 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column-reverse;
-  }
-}
+}         TRASH END    */
