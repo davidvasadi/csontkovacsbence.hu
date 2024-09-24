@@ -1606,11 +1606,22 @@ section,
   -o-background-size: cover;
   /* min-height: */
 }
-@media (max-width: 992px) {
+/*-------------------------------------------------
+#       Other Media Querys   
+--------------------------------------------------*/
+
+@media (max-width: 763px) {
   .row-mobile{
     display: block;
   }
-}  
+  .footer-logo-center {
+    justify-content: center;
+  }
+  .footer-logo{
+    margin-bottom: 30px;
+  }
+}
+
 /*-------------------------------------------------
 #       Trash ideas    
 --------------------------------------------------*/
