@@ -1,0 +1,40 @@
+RewriteEngine On
+
+# Konkrét átírási szabályok
+RewriteRule ^kezdooldal/?$ /index.html [L]
+RewriteRule ^szolgaltatasok/?$ /service-details.html [L]
+RewriteRule ^bemutatkozas/?$ /portfolio-details.html [L]
+RewriteRule ^kezelesem/?$ /treatment.html [L]
+
+# Átirányítás .html kiterjesztés nélküli URL-ekhez
+RewriteCond %{REQUEST_URI} !\.html$ [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ $1.html [L]
+
+# HTTPS-re irányítás és WWW eltávolítása
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://csontkovacsbence.hu/$1 [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+
+RewriteBase /
+
+# Gzip tömörítés
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE font/woff
+  AddOutputFilterByType DEFLATE font/woff2
+</IfModule>
+
+# 404-es hibaoldal
+ErrorDocument 404 /404.html

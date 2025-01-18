@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+
+# Megengedi az osszes keresomotornak, hogy felterkepezzek az oldal osszes tobbi reszet
+Allow: /
+
+# XML sitemap megadása
+Sitemap: https://www.csontkovacsbence.hu/sitemap.xml

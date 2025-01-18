@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Service Details - Avilon Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Csontkovács - Szolgáltatások Csonka Bence</title>
+  <meta name="description" content="Ismerd meg csontkovács szolgáltatásainkat: köpölyözés, gerinc terápia és egyéb személyre szabott kezelések Budapesten, Újpesten és Pest megyében.">
+
+  <meta name="keywords" content="csontkovács szolgáltatások, köpölyözés, gerinc terápia, személyre szabott kezelések, hátfájás kezelés, alternatív terápia Pest megye, csontkovács Újpest">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  <link href="assets/img/favicon-csontkovacsbence.svg" rel="icon">
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://csontkovacsbence.hu/service-details.html">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -23,12 +25,21 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet"> -->
+  <!-- <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"> -->
+  <!-- <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> -->
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D68E02BNK1">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-D68E02BNK1');
+  </script>
 
 </head>
 
@@ -44,9 +55,21 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="/index.html" class="active">Kezdőlap</a></li>
-          <li><a href="#about">Rólam</a></li>
-          <li><a href="#services">Szolgáltatások</a></li>
-          <li><a href="#contact">Kapcsolat</a></li>
+          <li><a href="/index.html#about">Rólam</a></li>
+          <li><a
+              href="https://the-place-health-beauty-salon.salonic.hu/employees/18183/?placeId=8151">Időpontfoglalás</a>
+          </li>
+          <!-- <li><a href="/index.html#services">Szolgáltatások</a></li> -->
+          <li class="dropdown"><a href="/index.html#services"><span>Szolgáltatások</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#csontkovacsolas">Csontkovácsolás</a></li>
+              <li><a href="#kopolyozes">Köpölyözés</a></li>
+              <li><a href="#ajandekutalvany">Ajándékutalvány</a></li>
+            </ul>
+          </li>
+          <li><a href="/treatment.html">Kezelésem</a></li>
+          <li><a href="/index.html#contact">Kapcsolat</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -60,7 +83,7 @@
     <div class="page-title dark-background">
       <div class="container position-relative">
         <h1>Szolgáltatások</h1>
-        <p>Szakértő Csontkovács Szolgáltatások – Fájdalomcsillapítás, Rehabilitáció és Köpölyözés</p>
+        <p>Szakképzett Csontkovács Szolgáltatások – Fájdalomcsillapítás, Rehabilitáció és Köpölyözés Budapesten.</p>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Kezdőoldal</a></li>
@@ -74,13 +97,15 @@
     <section id="service-details" class="service-details section">
 
       <div class="container">
-        <div class="row ">
-          <div class="col service-background-dark text-light p-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="row row-important">
+          <div class="col service-background-dark text-light p-5" id="csontkovacsolas" data-aos="fade-up"
+            data-aos-delay="100">
 
             <h3 class="text-light">Csontkovács kezelés</h3>
             <h4 class="text-light"> 20.000 Ft / Alkalom – 60 Perc </h4>
             <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Szakértő csontkovács kezelés a fájdalommentes életért</span>
+              <li><i class="bi bi-check-circle"></i> <span>Szakképzett csontkovács kezelés a fájdalommentes
+                  életért</span>
               </li>
               <li><i class="bi bi-check-circle"></i> <span>Gyors és eredményes kezelés a gerinc egészségéért</span>
               </li>
@@ -88,63 +113,152 @@
             </ul>
             <p>A csontkovács kezelés segít megszabadulni a mindennapos fájdalmaktól, javítva az
               életminőséget,egészséget. Érezhető javulás már az első kezelés után.Foglaljon időpontot még ma, és
-              tapasztalja meg a mozgásszabadságát.A személyreszabott kezelésem hatékonyan segít a gerinc- és
+              tapasztalja meg a mozgásszabadságát.A személyre szabott kezelésem hatékonyan segít a gerinc- és
               mozgásszervi problémák megoldásában.</p>
-            <a href="https://the-place-health-beauty-salon.salonic.hu/selectDate/?startDate=1726760107&placeId=8151&employeeId=18183&serviceId=167059"
+            <p>A csontkovácsolás nem javasolt többek között nyaki borda, súlyos csontritkulás,
+              csigolya sérülések,kiszakadt porckorongsérv, daganatos megbetegedés, friss törés vagy műtét,
+              illetve várandósság, pánikbetegség, skizofrénia és autizmus esetén. A kezelés előtt mindenképp
+              konzultáljon szakemberrel, hogy kizárhassa az ellenjavallatokat.</p>
+            <a href="https://the-place-health-beauty-salon.salonic.hu/employees/18183/?placeId=8151"
               class="section-button-blue">Foglaljon időpontot</a>
 
           </div>
-          <div class="col p-2" data-aos="fade-up" data-aos-delay="200">
-            <!-- <iframe width="100%" height="450px" src="https://www.youtube.com/embed/C99SgJwvi2A?si=jpl53YvFd-ZYEeBV" -->
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
+          <!-- Video Section -->
+          <div class="col" data-aos="fade-up" data-aos-delay="200">
+            <a href="https://www.tiktok.com/@csonka.bence">
+              <video autoplay="autoplay" loop="loop" muted playsinline class="video-backgroundcolor"
+                title="Csontkovács Csonka Bence bemutatkozó videó">
+                <source src="/assets/img/csontkovacs-csonka-bence.mp4" type="video/mp4">
+              </video>
+            </a> 
+          </div> 
+          
+          <script type="application/ld+json">
+            {
+              "@context": "http://schema.org",
+              "@type": "VideoObject",
+              "name": "Csontkovács Csonka Bence bemutatkozó videó",
+              "description": "Ez a videó bemutatja Csonka Bence csontkovács tevékenységét Budapesten.",
+              "thumbnailUrl": "https://csontkovacsbence.hu/assets/img/csontkovacs-csonka-bence-thumbnail.webp",
+              "uploadDate": "2024-01-01T08:00:00+00:00",
+              "contentUrl": "https://csontkovacsbence.hu/assets/img/csontkovacs-csonka-bence.mp4",
+              "embedUrl": "https://csontkovacsbence.hu",
+              "duration": "PT2M30S",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Csontkovács Csonka Bence",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://csontkovacsbence.hu/assets/img/logo.svg"
+                }
+              }
+            }
+            </script>
+        </div>
+        <div class="row row-important row-mobile-reverse mt-4">
+          <div class="col" data-aos="fade-up" data-aos-delay="200">
+            <!-- <video width="100%" height="500px" src="/assets/img/mixkit-close-up-of-a-chiropractor-helping-a-client-with-her-49542-hd-ready.mp4" autoplay ></video> -->
+            <a href="https://www.tiktok.com/@csonka.bence">
+              <video autoplay="autoplay" loop="loop" muted  playsinline class="video-backgroundcolor"
+                src="/assets/img/kopolyozes-vakuumos-kezeles-csontkovacs-csonka-bence.mp4"></video></a>
+            <script type="application/ld+json">
+                  {
+                    "@context": "http://schema.org",
+                    "@type": "VideoObject",
+                    "name": "Csontkovács Csonka Bence bemutatkozó videó",
+                    "description": "Ez a videó bemutatja Csonka Bence csontkovács tevékenységét Budapesten.",
+                    "thumbnailUrl": "https://csontkovacsbence.hu/assets/img/csontkovacs-csonka-bence-kopolyozes-thumbnail.webp",
+                    "uploadDate": "2024-10-14T08:00:00+00:00",
+                    "contentUrl": "https://csontkovacsbence.hu/assets/img/kopolyozes-vakuumos-kezeles-csontkovacs-csonka-bence.mp4",
+                    "embedUrl": "https://csontkovacsbence.hu",
+                    "duration": "PT11S",  // Frissítve a 11 másodpercre
+                    "publisher": {
+                      "@type": "Organization",
+                      "name": "Csontkovács Csonka Bence",
+                      "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://csontkovacsbence.hu/assets/img/logo.svg"
+                      }
+                    }
+                  }
+                  </script>
 
-          <div class="row my-4">
-            <div class="col p-2" data-aos="fade-up" data-aos-delay="200">
-              <!-- <iframe width="100%" height="450px" src="https://www.youtube.com/embed/C99SgJwvi2A?si=jpl53YvFd-ZYEeBV" -->
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
-              web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="col service-background-light text-dark p-4" data-aos="fade-up" data-aos-delay="100">
-
-              <h3 class="text-dark">Köpöly terápia</h3>
-              <h4 class="text-dark"> 15.000 Ft / Alkalom – 60 Perc </h4>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> <span>Köpölyözés a mélyreható izomlazításért</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Serkenti a vérkeringést és a regenerációt</span>
-                </li>
-                <li><i class="bi bi-check-circle"></i> <span>Ősi terápiás módszer modern kezelési technikákkal</span>
-                </li>
-              </ul>
-              <p>A csontkovács kezelés segít megszabadulni a mindennapos fájdalmaktól, javítva az
-                életminőséget,egészséget. Érezhető javulás már az első kezelés után.Foglaljon időpontot még ma, és
-                tapasztalja meg a mozgásszabadságát.A személyreszabott kezelésem hatékonyan segít a gerinc- és
-                mozgásszervi problémák megoldásában.</p>
-              <a href="https://the-place-health-beauty-salon.salonic.hu/selectDate/?startDate=1726760160&placeId=8151&employeeId=18183&serviceId=202762"
-                class="section-button-light">Foglaljon időpontot</a>
-            </div>
           </div>
+          <div class="col service-background-light text-dark p-5" id="kopolyozes" data-aos="fade-up"
+            data-aos-delay="100">
+
+            <h3 class="text-dark">Köpöly terápia</h3>
+            <h4 class="text-dark"> 15.000 Ft / Alkalom – 60 Perc </h4>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Köpölyözés a mélyreható izomlazításért</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Serkenti a vérkeringést és a regenerációt</span>
+              </li>
+              <li><i class="bi bi-check-circle"></i> <span>Ősi terápiás módszer modern kezelési technikákkal</span>
+              </li>
+            </ul>
+            <p>
+              A köpölyözés segít megszabadulni a feszültségektől és fájdalmaktól, javítva az életminőséget. Már az első
+              kezelés után érezhető javulás tapasztalható, ami segíti a test regenerálódását. Foglaljon időpontot még
+              ma, és tapasztalja meg a mozgás szabadságát! Személyre szabott kezelésem hatékonyan enyhíti a gerinc- és
+              mozgásszervi problémákat, serkenti a vérkeringést és a méregtelenítést, így közelebb kerülhet a
+              fájdalommentes élethez!
+            <p>A köpölyözés nem ajánlott magas láz, bőrfekély, vérérzékenység, súlyos bőrelváltozások, bőrallergia,
+              szívbetegségek, daganatos betegségek, menstruáció és várandósság esetén. Heveny fertőző betegségek,
+              valamint nagyon gyenge vagy idős embereknél szintén kerülendő. A kezelés előtt mindig konzultáljon
+              egészségügyi szakemberrel!</p>
+            <a href="#"
+              class="section-button-light">Nincs szabad hely</a>
+          </div>
+        </div>
+      </div>
     </section><!-- /Service Details Section -->
 
   </main>
+  <!-- Section Title -->
+  <div class="container section-title d-flex flex-column align-items-center custom-div" id="ajandekutalvany"
+    data-aos="fade-up">
+    <h2 id="price-section" class="inner-title">Ajándékutalvány</h2>
+    <p>Vásárolj ajándékutalványt csontkovácsolásra vagy köpölyözésre az újpesti szalonomban!</p>
+    <div class="col-lg-10 mt-5 d-flex about-img" data-aos="zoom-out" data-aos-delay="200">
+      <img src="assets/img/ajandekutalvany_csontkovacs.webp" class="img-fluid"
+        alt="ajándékutalvány,csontkovacsolas,csonka bence,csontkovacs">
+    </div>
+    <div class="inline-section">
+      <div class="mx-4" data-aos="zoom-in" data-aos-delay="100">
+        <a class="btn-get-started-pricing new-cta"
+          href="https://the-place-health-beauty-salon.salonic.hu/employees/18183/?placeId=8151">
+          <i class="bi bi-arrow-right h3 m-0 mx-2"></i>
+          Tovább az időpontfoglaláshoz
+        </a>
+      </div>
+      <div class="mx-4" data-aos="zoom-in" data-aos-delay="100">
+        <a class="btn-get-started-pricing new-cta" href="/index.html">
+          <i class="bi bi-arrow-right h3 m-0 mx-2"></i>
+          Vissza a kezdőoldalra
+
+        </a>
+      </div>
+    </div>
+  </div><!-- End Section Title -->
 
   <footer id="footer" class="footer dark-background">
-    <p>Szakértő csontkovács Budapesten – fájdalommentes mozgás és teljes élet elérhető áron. Foglaljon időpontot online!
+    <p>Szakképzett csontkovács Budapesten – fájdalommentes mozgás és teljes élet elérhető áron. Foglaljon időpontot
+      online!
     </p>
-    <div class="container d-flex align-items-center flex-wrap">
+
+    <div class="container d-flex align-items-center flex-wrap footer-logo-center">
       <a href="index.html" class="logo ">
         <img class=" footer-logo" src="assets/img/main-logo.svg" alt="csontkovacs-bence">
         <!-- <h1 class="sitename"></h1> -->
       </a>
       <div class="container ">
         <div class="social-links d-flex justify-content-center">
-          <a href=""><i class="bi bi-facebook"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-tiktok"></i></a>
+          <a href="https://www.facebook.com/csonkabencecsontkovacs/?_rdr"><i class="bi bi-facebook"></i></a>
+          <a
+            href="https://www.instagram.com/bence_csonka_?fbclid=IwY2xjawFdiMBleHRuA2FlbQIxMAABHVnub9cLDIkpsky5DMk1kAq7cQ33rz2ygwRtcRz2sJOTgrGrLNnPBAN2XA_aem_Xfmp5bu4ZGp9gbMoqF1kQw"><i
+              class="bi bi-instagram"></i></a>
+          <a href="https://www.tiktok.com/@csonka.bence"><i class="bi bi-tiktok"></i></a>
+
         </div>
       </div>
       <div class="container">
@@ -152,7 +266,7 @@
           <span>Copyright</span> <strong class="px-1 sitename"></strong> <span>All Rights Reserved</span>
         </div> -->
       </div>
-
+    </div>
   </footer>
 
   <!-- Scroll Top -->

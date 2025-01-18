@@ -1,10 +1,3 @@
-/**
-* Template Name: Avilon
-* Template URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 (function() {
   "use strict";
@@ -178,3 +171,24 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+
+//kezelesem.html
+function showSection(sectionId) {
+  const sections = document.querySelectorAll('.content-section');
+  sections.forEach((section) => {
+      section.classList.remove('active');
+  });
+
+  const targetSection = document.getElementById(sectionId);
+  targetSection.classList.add('active');
+
+  const navLinks = document.querySelectorAll('.custom-navbar .nav-link');
+  navLinks.forEach((link) => {
+      link.classList.remove('active');
+  });
+
+  const activeLink = document.querySelector(`.custom-navbar .nav-link[onclick="showSection('${sectionId}')"]`);
+  activeLink.classList.add('active');
+}
