@@ -1,0 +1,9 @@
+*.css linguist-vendored=false
+*.js linguist-vendored=false
+*.html linguist-vendored=false
+*.php linguist-vendored=false
+
+# Bootstrap & other librarys
+bootstrap/* linguist-vendored=false
+glightbox/* linguist-vendored=false
+swiper/* linguist-vendored=false
