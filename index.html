@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="hu">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -12,16 +11,15 @@
 
   <!-- Favicons -->
   <link href="assets/img/favicon-csontkovacsbence.svg" rel="icon">
-  <link href="assets/imgfavicon-csontkovacsbence.svg" rel="apple-touch-icon">
+  <link href="assets/img/favicon-csontkovacsbence.svg" rel="apple-touch-icon">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://csontkovacsbence.hu">
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
+
+  <!-- Google Fonts Preload for Performance -->
+  <link rel="preload"
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+    as="style">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,6 +31,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/testimonials.css" rel="stylesheet">
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -43,14 +42,14 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-5HVD9JTG');</script>
   <!-- End Google Tag Manager -->
-  <!-- Google Analytics Script -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D68E02BNK1"></script>
 
+  <!-- Google Analytics Script with Consent -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D68E02BNK1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
 
-    // Alapértelmezett consent beállítások
+    // Cookie consent banner handling (ensure you ask user for consent before tracking)
     gtag('consent', 'default', {
       'ad_storage': 'denied',
       'analytics_storage': 'denied',
@@ -59,19 +58,29 @@
       'wait_for_update': 500
     });
 
-    // Google Analytics alapbeállítások
+    // Google Analytics configuration
     gtag('js', new Date());
     gtag('config', 'G-D68E02BNK1');
   </script>
 
+  <!-- Open Graph metadata for thumbnails -->
+  <meta property="og:title" content="Csontkovács Csonka Bence">
+  <meta property="og:description" content="Szakértő segítség hátfájás, gerincfájdalom kezelésére.">
+  <meta property="og:image" content="https://csontkovacsbence.hu/assets/img/profile.webp">
+  <meta property="og:url" content="https://csontkovacsbence.hu">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card meta data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Csontkovács Csonka Bence">
+  <meta name="twitter:description" content="Szakértő segítség hátfájás, gerincfájdalom kezelésére.">
+  <meta name="twitter:image" content="https://csontkovacsbence.hu/assets/img/profile.webp">
 
 </head>
 
+
+
 <body class="index-page">
-  <!-- Google Tag Manager (noscript) -->
-  <!--<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HVD9JTG"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>-->
-  <!-- End Google Tag Manager (noscript) -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
@@ -92,8 +101,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="/service-details.html#csontkovacsolas">Csontkovácsolás</a></li>
-              <li><a href="/service-details.html#kopolyozes">Köpölyözés</a></li>
+              <!-- <li><a href="/service-details.html#kopolyozes">Köpölyözés</a></li> -->
               <li><a href="/service-details.html#ajandekutalvany">Ajándékutalvány</a></li>
+              
+              <li><a href="#faq">GYIK</a></li>
             </ul>
           </li>
           <li><a href="/treatment.html">Kezelésem</a></li>
@@ -116,25 +127,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Slide 1 -->
         <div class="carousel-item active">
           <div class="carousel-container">
-            <h2 class="animate__animated animate__fadeInDown">Derék vagy hátfájdalmaktól szenved?</h2>
-            <p class="animate__animated animate__fadeInUp">Szakképzett csontkovács segítségével fájdalommentesen,
-              természetes úton állítjuk helyre gerince egészségét! Speciális kezeléseink gyors megkönnyebbülést hoznak
-              azoknak, akik mozgásszervi problémákkal küzdenek. Lépjen a fájdalommentes élet útjára még ma! Foglaljon
-              időpontot online tapasztalt csontkovácsunkhoz, Budapesten.</p>
-            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Tudjon meg többet</a>
-            <a href="#pricing"
-              class="btn-get-started-pricing animate__animated animate__fadeInUp scrollto">Időpontfoglalás</a>
-          </div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <div class="carousel-container">
             <h2 class="animate__animated animate__fadeInDown">Régóta fennálló mozgásszervi problémája van?</h2>
             <p class="animate__animated animate__fadeInUp">Szakképzett Csontkovács módszerem segít
               helyreállítani az ízületek és izmok egyensúlyát, fájdalommentesen és természetes módon. Speciális
               technikáim azonnali megkönnyebbülést nyújtanak, legyen szó gerincproblémákról,
               izomfeszültségről vagy egyéb mozgásszervi panaszokról. Foglaljon időpontot online, és kezdje meg
               gyógyulását Budapesten!</p>
+            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Tudjon meg többet</a>
+            <a href="#pricing"
+              class="btn-get-started-pricing animate__animated animate__fadeInUp scrollto">Időpontfoglalás</a>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item ">
+          <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown">Derék vagy hátfájdalmaktól szenved?</h2>
+            <p class="animate__animated animate__fadeInUp">Szakképzett csontkovács segítségével fájdalommentesen,
+              természetes úton állítjuk helyre gerince egészségét! Speciális kezeléseink gyors megkönnyebbülést hoznak
+              azoknak, akik mozgásszervi problémákkal küzdenek. Lépjen a fájdalommentes élet útjára még ma! Foglaljon
+              időpontot online tapasztalt csontkovácsunkhoz, Budapesten.</p>
             <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Tudjon meg többet</a>
             <a href="#pricing"
               class="btn-get-started-pricing animate__animated animate__fadeInUp scrollto">Időpontfoglalás</a>
@@ -202,13 +213,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="our-story">
               <h4>Est 2021</h4>
               <h3>Rólam</h3>
-              <p>Csonka Bence vagyok masszőr,csontkovács.2021 óta foglalkozom mozgásszervi problémákkal.több száz
-                sikeres kezelés, problémamegoldásával a hátam mögött.Népi-lágy csontkovács, Érmelléki Módszert
-                alkalmazom a kezeléseim során.</p>
+              <p>Csonka Bence vagyok Mozgásterapeuta, Csontkovács és Masszőr.2021 óta foglalkozom mozgásszervi problémákkal, és azóta
+                <b>több ezer sikeres kezelést végeztem</b>, hozzájárulva vendégeim egészségéhez és jólétéhez. A kezeléseim
+                során az Érmelléki Módszer és Pap Miklós által oktatott csontkovácsolási technikák mellett a saját,
+                tapasztalataim alapján kialakított módszeremet is alkalmazom, hogy a lehető leghatékonyabban segítsek a
+                hozzám fordulóknak.</p>
               <ul>
                 <li><i class="bi bi-check-circle"></i> <span>Gépi mélyizom lazítás</span></li>
                 <li><i class="bi bi-check-circle"></i> <span>Speciális izom mobilizáció</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Lágy kimozgatás</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Precíz ízületmozgás a szimmetria helyreállításáért</span></li>
                 <li><i class="bi bi-check-circle"></i> <span>Köpöly terápia</span></li>
 
               </ul>
@@ -390,11 +403,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="col-sm-6">
             <div class="card pricing-item">
               <div class="card-body pricing-card-body">
-                <h3 class="pricing">Csontkovács kezelés</h3>
-                <h4 class="price-more-button">20000 <span> / óra</span></h4>
-                <p class="">Gépi mélyizom lazítás, Speciális izom mobilizáció,
-                  Lágy kimozgatás, Köpöly terápia. Népi-Lágy csontkovács,
-                  Érmelléki módszert alkalmazom a kezeléseim során...
+                <h3 class="pricing">Személyre Szabott Kombinált Terápia</h3>
+                <h4 class="price-more-button">24000 <span> / óra</span></h4>
+                <p class="">A test minden ízületét precíz,fájdalommentes technikával mozgásba hozzuk,hogy helyreálljon a
+                  szimmetria, csökkenjen a fájdalom és könnyedebbé váljon a mozgás. A kezelés végén köpölyterápia
+                  fokozza a keringést ...
                   <span class="price-more-button">
                     <a href="/service-details.html">részletek</a></span>
                 </p>
@@ -406,16 +419,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="col-sm-6">
             <div class="card pricing-item">
               <div class="card-body pricing-card-body">
-                <h3 class="pricing">Köpöly terápia</h3>
-                <h4 class="price-more-button">15000 <span> / óra</span></h4>
-                <p class="">Ha csak egy kis lazításra vágyna, akkor remek
-                  választás lehet számára az egész testes rendes,
-                  illetve csúsztatott Köpöly kezelés.
-                  A köpölyözéssel a test energiaáramlását...
+                <h3 class="pricing">Személyre Szabott Mozgásterápia</h3>
+                <h4 class="price-more-button">23000 <span> / 40 perc</span></h4>
+                <p class="">Ez a kezelés kiváló alternatíva azok számára, akik tartanak a köpölyözéstől, vagy akiknél
+                  nem ajánlott a használata.
+                  A test teljes ízületi rendszerét egy precíz, fájdalommentes technikával mozgatjuk át...
                   <span class="price-more-button">
                     <a href="/service-details.html">részletek</a></span>
                 </p>
-                <a href="#" class="price-button">Nincs szabad hely</a>
+                <a href="https://the-place-health-beauty-salon.salonic.hu/employees/18183/?placeId=8151"
+                  class="price-button">Időpontfoglalás</a>
               </div>
             </div>
           </div>
@@ -479,10 +492,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="faq-item">
                 <h3>Mi az a csontkovácsolás, és hogyan segíthet nekem?</h3>
                 <div class="faq-content">
-                  <p>A csontkovácsolás egy manuális terápia, amely a gerinc és ízületek helyreállításával segíti a test
-                    természetes egyensúlyát. A csontkovács finom technikákkal dolgozik, hogy javítsa a mozgékonyságot és
-                    enyhítse a fájdalmat. Ha hátfájdalom, nyakfájdalom, derékproblémák vagy ízületi panaszok gyötörnek,
-                    a csontkovács kezelések gyors és hatékony megoldást nyújthatnak a fájdalommentes élethez.</p>
+                  <p>A csontkovácsolás egy olyan speciális kezelés, amely a gerinc és az ízületek helyreállításával
+                    segíti a test természetes működését. A cél a mozgékonyság javítása és a fájdalom csökkentése. Ha
+                    hát-, nyak-, derék- vagy ízületi problémákkal küzd, a csontkovács segíthet a fájdalommentes élet
+                    elérésében.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Mire számíthatok egy csontkovács kezelés után?</h3>
+                <div class="faq-content">
+                  <p>A kezelés után előfordulhat izomláz vagy átmeneti fájdalomerősödés, mivel a test a hosszú ideje megszokott helytelen pozícióból lett kimozdítva. Ezek a tünetek általában 3-6 napig tartanak, majd fokozatosan enyhülnek, és az eredeti fájdalmak is szinte teljesen megszűnhetnek. Az, hogy mikor érezhető teljes javulás, attól függ, mennyire régóta és milyen súlyos mozgásszervi problémák állnak fenn.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -501,18 +522,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
           </div><!-- End Faq Column-->
-
+          
         </div>
 
       </div>
 
-    </section><!-- /Faq Section -->
-    <!-- Google Reviews -->
-    <!-- <div class='sk-ww-google-reviews sk_fb_stars' data-embed-id='25466238'></div><script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script> -->
-    <!-- Google Reviews End -->
-    <!-- <script src="https://static.elfsight.com/platform/platform.js" async></script>
-    <div class="elfsight-app-9ad8bcfb-3ed4-4210-97de-fc4f51c15ff0" data-elfsight-app-lazy></div> -->
-    <!-- Contact Section -->
+    </section><!-- End Faq Section -->
+
+    <!-- Testimonial Section -->
+
+     <section id="testimonials" class="testimonials">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2 class="inner-title">Vendégértékelések</h2>
+          <p>Olvassa el, mit mondanak a kezelésemről!</p>
+        </div>
+        <!-- Swiper container -->
+        <div class="swiper testimonials-slider">
+          <div class="swiper-wrapper" id="testimonial-cards">
+            <!--Slides from js -->
+          </div>
+          <!-- Paging points-->
+          <div class="swiper-pagination"></div>
+        </div>
+        <p class="average-rating">Átlagos értékelés: <strong id="average-rating">0.0</strong> / 5</p>
+        <a href="https://search.google.com/local/writereview?placeid=ChIJy-zlAzfbQUcReu9gdCmaeUU" target="_blank" class="google-link">
+          Tovább a Google értékeléseire →
+        </a>
+      </div>
+    </section>
+    <!-- End Testimonial Section -->
     <section id="contact" class="contact section">
 
       <!-- Section Title -->
@@ -622,7 +661,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a
             href="https://www.instagram.com/bence_csonka_?fbclid=IwY2xjawFdiMBleHRuA2FlbQIxMAABHVnub9cLDIkpsky5DMk1kAq7cQ33rz2ygwRtcRz2sJOTgrGrLNnPBAN2XA_aem_Xfmp5bu4ZGp9gbMoqF1kQw"><i
               class="bi bi-instagram"></i></a>
-          <a href="https://www.tiktok.com/@csonka.bence"><i class="bi bi-tiktok"></i></a>
+          <a href="https://www.tiktok.com/@csontkovacsbence.hu?_t=ZN-8u5LN8YdYpD&_r=1"><i class="bi bi-tiktok"></i></a>
         </div>
       </div>
       <!-- <div class="container"> -->
@@ -744,8 +783,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
 
+  <!-- Google Maps JS API -->
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_FQf7UM-J58Ok09GKqaId-lo_oA77eH0&libraries=places&callback=initTestimonials">
+    </script>
   <!-- Main JS File -->
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/testimonials.js" defer></script>
 
 </body>
 

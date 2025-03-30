@@ -1,0 +1,105 @@
+.testimonials {
+  padding: 60px 0;
+}
+
+.testimonials .section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Swiper alap stílusok */
+.swiper {
+  width: 100%;
+  padding-bottom: 40px;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* Testimonial Card stílus */
+.testimonial-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.profile-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.author-name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Csillagok */
+.stars {
+  color: #fbb034;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+/* Vélemény szöveg */
+.comment {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 0;
+}
+
+/* Tovább/Vissza gomb (csak a gombra vonatkozik) */
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #1dc7cd;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 5px;
+}
+
+/* Lapozó pontok */
+.swiper-pagination-bullet {
+  background: #ddd;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: #1dc7cd;
+}
+
+/* Average Rating & Google Link */
+.average-rating {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  font-weight: 500;
+}
+
+.google-link {
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1dc7cd;
+  text-decoration: none;
+}
+.google-link:hover {
+  text-decoration: underline;
+}
