@@ -1,5 +1,10 @@
 RewriteEngine On
 
+# HTTPS és WWW canonicalizáció – minden bejövő kérés átirányítása a https://csontkovacsbence.hu/ formára
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://csontkovacsbence.hu/$1 [L,R=301]
+
 # Konkrét átírási szabályok
 RewriteRule ^kezdooldal/?$ /index.html [L]
 RewriteRule ^szolgaltatasok/?$ /service-details.html [L]
@@ -11,13 +16,6 @@ RewriteCond %{REQUEST_URI} !\.html$ [NC]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ $1.html [L]
-
-# HTTPS-re irányítás és WWW eltávolítása
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://csontkovacsbence.hu/$1 [L,R=301]
-
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
 
 RewriteBase /
 
