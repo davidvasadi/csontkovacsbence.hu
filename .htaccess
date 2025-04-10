@@ -1,17 +1,26 @@
 RewriteEngine On
 
-# HTTPS és WWW canonicalizáció – minden bejövő kérés átirányítása a https://csontkovacsbence.hu/ formára
+# 1. Átirányítás: ha valaki .html kiterjesztéssel érkezik, irányítsd át az URL-t az extension-less változatra
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# 2. HTTPS és WWW canonicalizáció – minden bejövő kérés átirányítása a https://csontkovacsbence.hu/ formára
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://csontkovacsbence.hu/$1 [L,R=301]
 
-# Konkrét átírási szabályok
-RewriteRule ^kezdooldal/?$ /index.html [L]
+# 3. HTTP Strict Transport Security (HSTS) beállítása
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+</IfModule>
+
+# 4. Konkrét átírási szabályok a SEO friendly URL-ekhez
+RewriteRule ^kezdolap/?$ /index.html [L]
 RewriteRule ^szolgaltatasok/?$ /service-details.html [L]
 RewriteRule ^bemutatkozas/?$ /portfolio-details.html [L]
 RewriteRule ^kezelesem/?$ /treatment.html [L]
 
-# Átirányítás .html kiterjesztés nélküli URL-ekhez
+# 5. Átirányítás: ha a kérések nem tartalmaznak .html-t és nem létező fájl vagy könyvtár, belsőleg kiegészítjük .html-el
 RewriteCond %{REQUEST_URI} !\.html$ [NC]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -19,7 +28,7 @@ RewriteRule ^(.*)$ $1.html [L]
 
 RewriteBase /
 
-# Gzip tömörítés
+# 6. Gzip tömörítés
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html
   AddOutputFilterByType DEFLATE text/css
@@ -34,5 +43,36 @@ RewriteBase /
   AddOutputFilterByType DEFLATE font/woff2
 </IfModule>
 
-# 404-es hibaoldal
+# 7. 404-es hibaoldal beállítása
 ErrorDocument 404 /404.html
+
+# 8. Cache szabály képekre
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg)$">
+    Header unset Cache-Control
+    Header set Cache-Control "public, max-age=31536000"
+  </FilesMatch>
+</IfModule>
+
+# 9. Cache szabály CSS és JavaScript fájlokra
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/x-javascript "access plus 1 month"
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js)$">
+    Header unset Cache-Control
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>

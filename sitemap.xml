@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <!-- Főoldal -->
+  <!-- Főoldal / Kezdőlap -->
   <url>
     <loc>https://csontkovacsbence.hu/</loc>
     <lastmod>2024-12-22T17:49:06+00:00</lastmod>
     <priority>1.00</priority>
     <image:image>
-      <image:loc>https://csontkovacsbence.hu/assets/img/profile.webp</image:loc>
+      <image:loc>https://csontkovacsbence.hu/assets/img/logo.svg</image:loc>
       <image:title>Csontkovács Csonka Bence profilkép</image:title>
     </image:image>
   </url>
 
-  <!-- Index -->
+  <!-- Szolgáltatások (Service Details) -->
   <url>
-    <loc>https://csontkovacsbence.hu/</loc>
-    <lastmod>2024-12-22T17:49:06+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- Service Details -->
-  <url>
-    <loc>https://csontkovacsbence.hu/service-details.html</loc>
+    <loc>https://csontkovacsbence.hu/szolgaltatasok</loc>
     <lastmod>2024-12-13T18:28:18+00:00</lastmod>
     <priority>0.80</priority>
     <image:image>
@@ -30,22 +23,26 @@
     </image:image>
   </url>
 
-  <!-- Treatment -->
+  <!-- Kezelés (Treatment) -->
   <url>
-    <loc>https://csontkovacsbence.hu/treatment.html</loc>
+    <loc>https://csontkovacsbence.hu/kezelesem</loc>
     <lastmod>2024-12-02T18:12:52+00:00</lastmod>
     <priority>0.80</priority>
     <image:image>
       <image:loc>https://csontkovacsbence.hu/assets/img/csontkovacs-csonka-bence-kopolyozes-thumbnail.webp</image:loc>
-      <image:title>Csontkovács kezelés thumbnail</image:title>
+      <image:title>Csontkovács kezelések</image:title>
     </image:image>
   </url>
 
-  <!-- Portfolio Details -->
+  <!-- Bemutatkozás (Portfolio Details) -->
   <url>
-    <loc>https://csontkovacsbence.hu/portfolio-details.html</loc>
+    <loc>https://csontkovacsbence.hu/bemutatkozas</loc>
     <lastmod>2024-12-02T18:09:57+00:00</lastmod>
     <priority>0.80</priority>
+        <image:image>
+      <image:loc>https://csontkovacsbence.hu/assets/img/csontkovacs-csonka-bence.jpeg</image:loc>
+      <image:title>Csontkovács bemutatkozás</image:title>
+    </image:image>
   </url>
 
   <!-- Adatvédelmi nyilatkozat -->
